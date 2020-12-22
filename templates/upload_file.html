@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+            <div class="col">
+
+                <h1>Upload a file</h1>
+                    <hr>
+
+                        <form action="/uploader" method="POST" enctype="multipart/form-data">
+
+                            <div class="form-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="file1" id="file">
+                                    <select id="graph" name="graph">
+                                        <option value="svr">Sent vs. Recieved</option>
+                                        <option value="trend">Trend over time</option>
+                                        <option value="pie">Most Snapped</option>
+                                    </select>
+                                    <input type="submit" class="btn btn-primary">
+                                </div>
+                            </div>
+
+                        </form>
+                    <hr>
+                    <!--<img src="{{ user_image }}" alt="User Image">-->
+                    <!--<img src="/uploader" alt = "Plot">-->
+                    <h3>Reminder: Our data processing is currently only available for snap_history.json and chat_history.json files.</h3>
+            </div>
+    </div>
+</div>
+
+{% endblock %}
