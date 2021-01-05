@@ -27,8 +27,6 @@ def add():
   new = game.player(Name)
   session['players'].append(new)
   session['num_players'] = len(players)
-  #players = game.add_player(Name)
-  #num_players = len(players)
   return render_template('add_players.html', players = players)
 
 @app.route("/scoreboard", methods=["GET","POST"])

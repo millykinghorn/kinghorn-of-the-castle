@@ -9,11 +9,5 @@ class player:
     def add_points(self, x):
         self.score += x
 
-
-def add_player(name):
-    new = player(name)
-    players.append(new)
-    return players
-
 def random(x):
     return randrange(x)

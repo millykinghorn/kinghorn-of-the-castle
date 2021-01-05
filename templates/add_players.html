@@ -1,29 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
-<script>
-function addRow(tableID, player) {
-  var table = document.getElementById("player-table");
-  var row = table.insertRow(-1);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  cell1.innerHTML = player.name;
-  cell2.innerHTML = player.score;
-}
-function addPlayer(name){
-  name = request.form['name']
-  players = game.add_player(name)
-  x = len(players)
-  location.reload()
-}
-</script>
 
 <div class = "jumbo">
     <h2>To add Players enter details below</h2>
     <div>
     <form action="/add" method="POST" enctype="multipart/form-data">
-    <!--<form action="/add" >-->
       <input type="text" id="name" name="name">
-      <!--<input action="/add" type="submit" value="Submit" onclick="addPlayer(request.form['name'])"-->
       <input action="/add" type="submit" value="Submit">
       <br>
     </form>
