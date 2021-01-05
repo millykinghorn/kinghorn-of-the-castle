@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div>
+    <table id = "scoreboard-table">
+    <tr>
+        <th>Name</th>
+        <th>Score</th>
+    </tr>
+    {% for player in players %}
+    <tr>
+        <th>{{ player.name }}</th>
+        <th>{{ player.score }}</th>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+<form action="/scoreboard" method="POST" enctype="multipart/form-data">    
+        <input action="/scoreboard" type="submit" value="Winner">
+</form>
+
+{% endblock %}
